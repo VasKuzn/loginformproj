@@ -239,3 +239,64 @@ button {
 .apple-button:active .spinner {
     display: block;
 }
+
+.background-animations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.animation-item {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.animation-item:nth-child(odd) {
+    animation-duration: 7s;
+}
+
+.animation-item:nth-child(even) {
+    animation-duration: 10s;
+}
+
+.animation-item:nth-child(3n) {
+    animation-duration: 6s;
+}
+
+@keyframes sizeChange {
+    0% {
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1.7);
+    }
+
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+.animation-item {
+    animation: sizeChange ease-in-out infinite;
+}
+
+.animation-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animation-item:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.animation-item:nth-child(3) {
+    animation-delay: 2s;
+}
