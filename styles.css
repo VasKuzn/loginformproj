@@ -254,7 +254,7 @@ button {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #3b82f6;
     border-radius: 50%;
     opacity: 0.8;
 }
