@@ -48,20 +48,13 @@ li,
     color: grey;
 }
 
-li {
-    cursor: pointer;
+li a {
+    text-decoration: none;
+    color: grey;
 }
 
-
-input {
-    border: 2px solid grey;
-    border-radius: 4px;
-    padding: 15px;
-    width: 100%;
-    text-align: left;
-    font-weight: 400;
-    height: 45px;
-    box-sizing: border-box;
+button {
+    text-align: center;
 }
 
 input[type="password"] {
@@ -71,6 +64,17 @@ input[type="password"] {
 input::placeholder {
     color: grey;
     font-weight: normal;
+}
+
+.log-element {
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-weight: 400;
+    height: 45px;
+    box-sizing: border-box;
 }
 
 .line-element {
@@ -115,9 +119,12 @@ input::placeholder {
 
 .show-element {
     position: relative;
-    left: 85%;
+    left: 82%;
     bottom: 32px;
     color: #0a66c2;
+    border: none;
+    background-color: white;
+
 }
 
 .forgot-element {
@@ -136,10 +143,6 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-button {
-    text-align: center;
 }
 
 .primary-button {
@@ -171,6 +174,27 @@ button {
 .primary-button:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 15px 0;
+    padding: 0;
+    gap: 5px;
+    align-items: center;
+}
+
+.checkbox-container p {
+    padding: 0;
+    margin: 0 0 0 0;
+    font-size: 14px;
+}
+
+.checkbox-element {
+    padding: 0;
+    margin: 0;
+    align-items: center;
 }
 
 @keyframes gradient-animation {

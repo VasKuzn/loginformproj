@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>loginform</title>
+    <title>Login Form</title>
 </head>
 
 <body>
-    <div class="background-animations">
+    <div class="background-animations" aria-hidden="true">
         <div class="animation-item" style="left: 10%;"></div>
         <div class="animation-item" style="left: 20%;"></div>
         <div class="animation-item" style="left: 30%;"></div>
@@ -22,43 +22,42 @@
     </div>
     <div class="main-container">
         <header>
-            <h1>
-                Sign in
-            </h1>
-            <p>
-                Stay updated on your professional world
-            </p>
+            <h1>Sign in</h1>
+            <p>Stay updated on your professional world</p>
         </header>
         <div>
             <div class="input-container">
-                <input type="text" placeholder="Email or Phone">
-                <input type="password" placeholder="Password">
+                <label for="email">Email or Phone</label>
+                <input class="log-element" type="text" id="email" placeholder="Email or Phone">
+
+                <label for="password">Password</label>
+                <input class="log-element" type="password" id="password" placeholder="Password">
             </div>
-            <span class="show-element">Show</span>
-            <p class="forgot-element">
-                Forgot password?
-            </p>
+            <button class="show-element" aria-label="Show password" tabindex="0">Show</button>
+            <div class="checkbox-container">
+                <input class="checkbox-element" type="checkbox" id="keep-signed-in">
+                <label for="keep-signed-in">Keep me signed in</label>
+            </div>
+            <p class="forgot-element" tabindex="0" role="link">Forgot password?</p>
         </div>
         <div class="buttons">
             <button class="primary-button">Sign in</button>
             <div class="line-element">or</div>
-            <button class="apple-button"><img src="https://img.icons8.com/ios11/512/mac-os.png" alt="apple"
-                    width=" 20px" height="20px"></img>
+            <button class="apple-button">
+                <img src="https://img.icons8.com/ios11/512/mac-os.png" alt="Apple logo" width="20" height="20">
                 <span class="apple-text">Sign in with Apple</span>
-                <div class="spinner"></div>
+                <div class="spinner" aria-hidden="true"></div>
             </button>
         </div>
     </div>
     <footer>
         <div>
-            <p>
-                New to LinkedIn? <span id="join-element">Join now</span>
-            </p>
+            <p>New to LinkedIn? <span id="join-element" role="link" tabindex="0">Join now</span></p>
             <ul>
-                <li>Privacy policy</li>
-                <li>Community Guidelines</li>
-                <li>Cookie policy</li>
-                <li>Copyright policy</li>
+                <li><a href="#" role="link">Privacy policy</a></li>
+                <li><a href="#" role="link">Community Guidelines</a></li>
+                <li><a href="#" role="link">Cookie policy</a></li>
+                <li><a href="#" role="link">Copyright policy</a></li>
             </ul>
         </div>
     </footer>
