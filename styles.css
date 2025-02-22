@@ -185,7 +185,7 @@ input::placeholder {
     align-items: center;
 }
 
-.checkbox-container p {
+.checkbox-container label {
     padding: 0;
     margin: 0 0 0 0;
     font-size: 14px;
