@@ -1,0 +1,16 @@
+{
+  "name": "infrastructure",
+  "version": "1.0.1",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "VasilyK",
+  "repository": "https://github.com/VasKuzn/loginformproj/blob/main/infrastructure/main.html",
+  "license": "ISC",
+  "description": "project for the second part of the homework",
+  "engines": {
+    "node": ">=10.9.0"
+  }
+}
