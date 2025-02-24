@@ -317,7 +317,7 @@ input::placeholder {
     animation-delay: 2s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     body {
         padding: 20px;
     }
@@ -329,9 +329,13 @@ input::placeholder {
     .buttons button {
         width: 100%;
     }
+
+    .show-element {
+        left: 90%;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 762px) {
     body {
         padding: 10px;
     }
@@ -355,13 +359,13 @@ input::placeholder {
     }
 
     .show-element {
-        left: 77%;
+        left: 85%;
     }
 }
 
-@media (max-width: 240px) {
+@media (max-width: 480px) {
     .show-element {
-        left: 71%;
+        left: 80%;
     }
 }
 
