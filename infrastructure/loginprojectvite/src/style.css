@@ -55,7 +55,7 @@ li,
   color: grey;
 }
 
-input[type="password"] {
+input[type='password'] {
   border: 2px solid #0a66c2;
 }
 
@@ -120,7 +120,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .primary-button {
@@ -135,7 +135,9 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   animation: gradient-animation 3s infinite;
 }
 
@@ -177,7 +179,9 @@ input::placeholder {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .apple-text {
@@ -207,7 +211,7 @@ input::placeholder {
 
 .line-element::before,
 .line-element::after {
-  content: "";
+  content: '';
   flex: 1;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.15);
@@ -253,39 +257,39 @@ input::placeholder {
 
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes sizeChange {
   0% {
-      transform: scale(0.7);
+    transform: scale(0.7);
   }
 
   50% {
-      transform: scale(1.7);
+    transform: scale(1.7);
   }
 
   100% {
-      transform: scale(0.7);
+    transform: scale(0.7);
   }
 }
 
 @keyframes gradient-animation {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
 
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -319,58 +323,58 @@ input::placeholder {
 
 @media (max-width: 768px) {
   body {
-      padding: 20px;
+    padding: 20px;
   }
 
   .main-container {
-      width: 80%;
+    width: 80%;
   }
 
   .buttons button {
-      width: 100%;
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   body {
-      padding: 10px;
+    padding: 10px;
   }
 
   .main-container {
-      width: 95%;
-      padding: 15px;
+    width: 95%;
+    padding: 15px;
   }
 
   h1 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .buttons button {
-      width: 100%;
-      height: 50px;
+    width: 100%;
+    height: 50px;
   }
 
   ul {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .show-element {
-      left: 77%;
+    left: 77%;
   }
 }
 
 @media (max-width: 240px) {
   .show-element {
-      left: 71%;
+    left: 71%;
   }
 }
 
 @media (min-width: 1200px) {
   .main-container {
-      width: 400px;
+    width: 400px;
   }
 
   h1 {
-      font-size: 32px;
+    font-size: 32px;
   }
 }
