@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('password', password);
       }
       setTimeout(() => {
-        window.location.href = 'https://github.com/VasKuzn';
+        window.location.href = 'https://www.youtube.com/watch?v=d5PvwXOq6JQ';
       }, 500);
       event.preventDefault();
     } else {
