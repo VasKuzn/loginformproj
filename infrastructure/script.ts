@@ -1,13 +1,29 @@
-const correctTuple = { phone: "+12345678901", email: "Semyon@Volkov.com", password: "123456" };
-const secretTuple = { phone: "+12345678902", email: "Secret@redir.haha", password: "nichegoneproizoshlo" };
+type UserCredentials = {
+    phone: string;
+    email: string;
+    password: string;
+};
+
+const correctTuple: UserCredentials = {
+    phone: "+12345678901",
+    email: "Semyon@Volkov.com",
+    password: "123456"
+};
+
+const secretTuple: UserCredentials = {
+    phone: "+12345678902",
+    email: "Secret@redir.haha",
+    password: "nichegoneproizoshlo"
+};
 
 document.addEventListener("DOMContentLoaded", () => {
-    let inputEmailPhone = document.getElementById("email");
-    let inputPassword = document.getElementById("password");
-    let showButton = document.querySelector(".show-element");
-    let loginForm = document.getElementById("login-form");
-    let keepSignedIn = document.getElementById("keep-signed-in");
-    let appleButton = document.querySelector(".apple-button");
+    const inputEmailPhone = document.getElementById("email") as HTMLInputElement;
+    const inputPassword = document.getElementById("password") as HTMLInputElement;
+    const showButton = document.querySelector(".show-element") as HTMLButtonElement;
+    const loginForm = document.getElementById("login-form") as HTMLFormElement;
+    const keepSignedIn = document.getElementById("keep-signed-in") as HTMLInputElement;
+    const appleButton = document.querySelector(".apple-button") as HTMLButtonElement;
+
     if (showButton) {
         showButton.addEventListener("click", () => {
             if (inputPassword.type === "password") {
@@ -30,10 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function validateForm(event) {
-        let emailOrPhone = inputEmailPhone.value.trim();
-        let password = inputPassword.value.trim();
-        let isValid = true;
+    function validateForm(event: Event): void {
+        let emailOrPhone: string = inputEmailPhone.value.trim();
+        let password: string = inputPassword.value.trim();
+        let isValid: boolean = true;
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const phoneRegex = /^\+\d{11}$/;
@@ -80,24 +96,23 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 window.location.href = "https://github.com/VasKuzn";
             }, 500);
-
             event.preventDefault();
         } else {
             alert("Введено неправильно");
             event.preventDefault();
         }
     }
+
     if (appleButton) {
         appleButton.addEventListener("click", () => {
             if (localStorage.getItem("emailOrPhone")) {
-                inputEmailPhone.value = localStorage.getItem("emailOrPhone");
+                inputEmailPhone.value = localStorage.getItem("emailOrPhone") || "";
             }
             if (localStorage.getItem("password")) {
-                inputPassword.value = localStorage.getItem("password");
+                inputPassword.value = localStorage.getItem("password") || "";
             }
         });
     }
-
 
     loginForm.addEventListener("submit", validateForm);
 });
