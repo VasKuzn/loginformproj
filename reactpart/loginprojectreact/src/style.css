@@ -1,9 +1,12 @@
 * {
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   margin: 0 auto;
   padding: 50px;
@@ -26,23 +29,17 @@ ul {
 }
 
 header {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
   gap: 7px;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
 }
 
 header p {
   margin: 0 0 20px 0;
-  font-size: 13px;
+  font-size: 15px;
+}
+
+header p,
+.logo-container {
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 li a {
@@ -72,6 +69,31 @@ input::placeholder {
   text-decoration: none;
 }
 
+#join-element {
+  margin-left: 5px;
+}
+
+.main-body {
+  background: linear-gradient(-45deg, #1e3a8a, #151838, #1a2438, #1e3a8a);
+  background-size: 400% 400%;
+  animation: gradient-flow 12s ease infinite;
+  color: #d5d6da;
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .centered-container {
   display: flex;
   flex-direction: column;
@@ -83,6 +105,14 @@ input::placeholder {
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #07081c;
+  color: #d5d6da;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .log-element {
@@ -91,7 +121,8 @@ input::placeholder {
   padding: 15px;
   width: 100%;
   text-align: left;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 16px;
   height: 45px;
   box-sizing: border-box;
 }
@@ -176,7 +207,7 @@ input::placeholder {
 .apple-button {
   display: flex;
   color: grey;
-  border: 1px solid rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(213, 214, 218, 0.6);
   border-radius: 20px;
   height: 40px;
   width: 250px;
@@ -192,10 +223,11 @@ input::placeholder {
 
 .apple-text {
   transition: opacity 0.3s ease;
+  margin-left: 5px
 }
 
 .input-container input {
-  padding-right: 50px;
+  padding-right: 65px;
   margin-bottom: 0 auto;
 }
 
@@ -299,6 +331,18 @@ input::placeholder {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animation-item:nth-child(odd) {
   animation-duration: 7s;
 }
@@ -341,7 +385,7 @@ input::placeholder {
   }
 
   .show-element {
-    left: 90%;
+    left: 85%;
   }
 }
 
@@ -369,13 +413,13 @@ input::placeholder {
   }
 
   .show-element {
-    left: 85%;
+    left: 80%;
   }
 }
 
 @media (max-width: 480px) {
   .show-element {
-    left: 80%;
+    left: 75%;
   }
 }
 

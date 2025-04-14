@@ -6,8 +6,8 @@ const FooterComponent = () => {
             <footer>
                 <div>
                     <p>
-                        New to Syncro?
-                        <a href="register.html" id="join-element">Join now</a>
+                        Want to synchronize?
+                        <a href="register.html" id="join-element">Sign up!</a>
                     </p>
                     <ul>
                         <li><a href="#">Privacy policy</a></li>
