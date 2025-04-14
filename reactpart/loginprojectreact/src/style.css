@@ -72,6 +72,12 @@ input::placeholder {
   text-decoration: none;
 }
 
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main-container {
   width: 352px;
   padding: 24px;

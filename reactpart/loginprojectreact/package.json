@@ -1,5 +1,5 @@
 {
-  "name": "infrastructure",
+  "name": "react",
   "version": "1.0.1",
   "main": "src/script.ts",
   "type": "module",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "@typescript-eslint/parser": "^8.24.1",
     "eslint": "^9.21.0",
@@ -35,9 +36,15 @@
   "author": "VasilyK",
   "repository": "https://github.com/VasKuzn/loginformproj/blob/main/infrastructure/main.html",
   "license": "ISC",
-  "description": "project for the second part of the homework",
+  "description": "project for the third part of the homework",
   "engines": {
     "node": ">=23.8.0",
     "npm": ">=10.9.2"
+  },
+  "dependencies": {
+    "jsx": "^0.9.89",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tsx": "^4.19.3"
   }
 }
