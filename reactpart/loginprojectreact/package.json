@@ -1,0 +1,43 @@
+{
+  "name": "infrastructure",
+  "version": "1.0.1",
+  "main": "src/script.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "serve": "serve -s dist -l 3000",
+    "start": "npm run build && npm run serve",
+    "format": "prettier --write '**/*.{ts,js,css,html,json}'",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.{js,mjs,cjs,ts}\"",
+    "lint:fix": "eslint \"src/**/*.{js,mjs,cjs,ts}\" --fix",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^16.0.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.5.2",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.1.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^3.0.6"
+  },
+  "keywords": [],
+  "author": "VasilyK",
+  "repository": "https://github.com/VasKuzn/loginformproj/blob/main/infrastructure/main.html",
+  "license": "ISC",
+  "description": "project for the second part of the homework",
+  "engines": {
+    "node": ">=23.8.0",
+    "npm": ">=10.9.2"
+  }
+}
