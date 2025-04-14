@@ -16,85 +16,6 @@ const secretTuple: UserCredentials = {
     password: 'nichegoneproizoshlo',
 };
 
-const everythingFromInfra = () => {
-    document.addEventListener('DOMContentLoaded', () => {
-        const inputEmailPhone = document.getElementById('email') as HTMLInputElement;
-        const inputPassword = document.getElementById('password') as HTMLInputElement;
-        const showButton = document.querySelector(
-            '.show-element',
-        ) as HTMLButtonElement;
-        const loginForm = document.getElementById('login-form') as HTMLFormElement;
-        const keepSignedIn = document.getElementById(
-            'keep-signed-in',
-        ) as HTMLInputElement;
-        const appleButton = document.querySelector(
-            '.apple-button',
-        ) as HTMLButtonElement;
-
-
-        function validateForm(event: Event): void {
-            const emailOrPhone: string = inputEmailPhone.value.trim();
-            const password: string = inputPassword.value.trim();
-            let isValid: boolean = true;
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const phoneRegex = /^\+\d{11}$/;
-
-            if (!emailOrPhone) {
-                alert('Пожалуйста, введите email или номер телефона.');
-                isValid = false;
-            } else if (
-                !(emailRegex.test(emailOrPhone) || phoneRegex.test(emailOrPhone))
-            ) {
-                alert('Введите корректный email или номер телефона.');
-                isValid = false;
-            }
-
-            if (!password) {
-                alert('Введите пароль.');
-                isValid = false;
-            } else if (password.length < 6) {
-                alert('Пароль должен содержать минимум 6 символов.');
-                isValid = false;
-            }
-
-            if (!isValid) {
-                event.preventDefault();
-                return;
-            }
-
-            if (
-                (emailOrPhone === correctTuple.email ||
-                    emailOrPhone === correctTuple.phone) &&
-                password === correctTuple.password
-            ) {
-                alert('Введено правильно');
-                if (keepSignedIn.checked) {
-                    localStorage.setItem('emailOrPhone', emailOrPhone);
-                    localStorage.setItem('password', password);
-                }
-            } else if (
-                (emailOrPhone === secretTuple.email ||
-                    emailOrPhone === secretTuple.phone) &&
-                password === secretTuple.password
-            ) {
-                alert('Секретные данные, перенаправляем...');
-                if (keepSignedIn.checked) {
-                    localStorage.setItem('emailOrPhone', emailOrPhone);
-                    localStorage.setItem('password', password);
-                }
-                setTimeout(() => {
-                    window.location.href = 'https://www.youtube.com/watch?v=d5PvwXOq6JQ';
-                }, 500);
-                event.preventDefault();
-            } else {
-                alert('Введено неправильно');
-                event.preventDefault();
-            }
-        }
-    });
-}
-
 const App = () => {
     const [emailOrPhone, setEmailOrPhone] = useState('');
     const [password, setPassword] = useState('');
@@ -102,10 +23,12 @@ const App = () => {
     const [keepSignedIn, setKeepSignedIn] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [maxLength, setMaxLength] = useState(100);
+    let SavedEmailOrPhone;
+    let SavedPassword;
 
     useEffect(() => {
-        const SavedEmailOrPhone = localStorage.getItem('emailOrPhone');
-        const SavedPassword = localStorage.getItem('password');
+        SavedEmailOrPhone = localStorage.getItem('emailOrPhone');
+        SavedPassword = localStorage.getItem('password');
 
         if (SavedEmailOrPhone) {
             setEmailOrPhone(SavedEmailOrPhone);
@@ -144,8 +67,8 @@ const App = () => {
 
         setIsLoading(true);
         setTimeout(() => {
-            const SavedEmailOrPhone = localStorage.getItem('emailOrPhone');
-            const SavedPassword = localStorage.getItem('password');
+            SavedEmailOrPhone = localStorage.getItem('emailOrPhone');
+            SavedPassword = localStorage.getItem('password');
 
             if (SavedEmailOrPhone) {
                 setEmailOrPhone(SavedEmailOrPhone);

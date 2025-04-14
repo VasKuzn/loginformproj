@@ -6,7 +6,7 @@ const FooterComponent = () => {
             <footer>
                 <div>
                     <p>
-                        New to LinkedIn?
+                        New to Syncro?
                         <a href="register.html" id="join-element">Join now</a>
                     </p>
                     <ul>

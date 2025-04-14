@@ -92,8 +92,8 @@ const LoginComponent: React.FC<LoginComponentProps> = ({
                         onClick={onAppleButtonClick}
                         disabled={isLoading}
                     >
-                        <img src="https://img.icons8.com/ios11/512/mac-os.png" alt="Apple logo" width="20" height="20" />
-                        <span className="apple-text">Sign in with Apple</span>
+                        <img src="./steam.png" alt="Steam logo" width="20" height="20" />
+                        <span className="apple-text">Sign in with Steam</span>
                         {isLoading && <div className="spinner" aria-hidden="true"></div>}
                     </button>
                 </div>
