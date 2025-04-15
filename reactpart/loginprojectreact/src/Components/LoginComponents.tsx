@@ -71,13 +71,21 @@ const LoginComponent: React.FC<LoginComponentProps> = ({
                 </div>
 
                 <div className="checkbox-container">
-                    <input
-                        className="checkbox-element"
-                        type="checkbox"
-                        id="keep-signed-in"
-                        checked={keepSignedIn}
-                        onChange={onKeepSignedInChange}
-                    />
+                    <div className="checkbox-wrapper-10">
+                        <input
+                            className="tgl tgl-flip checkbox-element"
+                            id="keep-signed-in"
+                            type="checkbox"
+                            checked={keepSignedIn}
+                            onChange={onKeepSignedInChange}
+                        />
+                        <label
+                            className="tgl-btn"
+                            data-tg-off="No"
+                            data-tg-on="Yes"
+                            htmlFor="keep-signed-in"
+                        ></label>
+                    </div>
                     <label htmlFor="keep-signed-in">Keep me signed in</label>
                 </div>
 
